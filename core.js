@@ -90,18 +90,19 @@ function cacheSet(key, value) {
 
 async function loadStory() {
 
-    const url = `${getBaseURL()}/story.json`;
+    const url = "https://phuocmarc.github.io/storyblog-engine/stories/nhung-cuoc-xe-am-duong/story.json";
 
-    if (cacheGet(url)) return cacheGet(url);
+    console.log("FETCH STORY:", url);
 
-    const data = await fetchJSON(url);
+    const res = await fetch(url);
 
-    cacheSet(url, data);
+    console.log("STATUS:", res.status);
+
+    const data = await res.json();
 
     StoryEngine.state.story = data;
 
     return data;
-
 }
 
 

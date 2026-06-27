@@ -5,7 +5,7 @@
  Version : 1.0.0
 ========================================================
 */
-
+console.log("CORE START");
 "use strict";
 
 /* =========================
@@ -529,3 +529,4 @@ body {
         font-size: 14px;
     }
 }
+console.log("CORE END");

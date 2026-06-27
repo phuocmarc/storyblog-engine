@@ -1,24 +1,3 @@
-/*
-==========================================================
- StoryBlog Engine X
- File    : config.js
- Version : 1.0.0
-==========================================================
-*/
-
-
-const CONFIG = {
-    github: {
-        user: "phuocmarc",
-        repo: "storyblog-engine",
-        branch: "main"
-    },
-
-    story: {
-        folder: "nhung-cuoc-xe-am-duong"
-    },
-
-    reader: {
-        chapterHeight: 500
-    }
+window.CONFIG = {
+    storyUrl: "stories/nhung-cuoc-xe-am-duong/story.json"
 };

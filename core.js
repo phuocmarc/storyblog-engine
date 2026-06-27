@@ -1,3 +1,4 @@
+document.body.innerHTML = "<h2>CORE IS RUNNING</h2>"
 /*
 ========================================================
  StoryBlog Engine X

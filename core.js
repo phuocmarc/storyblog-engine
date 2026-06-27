@@ -8,7 +8,7 @@ window.startEngine = async function () {
 
     try {
 
-        const url = "stories/nhung-cuoc-xe-am-duong/story.json";
+        const url = `${location.origin}/storyblog-engine/stories/nhung-cuoc-xe-am-duong/story.json`;
 
         const res = await fetch(url);
 

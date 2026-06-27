@@ -269,14 +269,15 @@ async function renderChapters() {
 /* =========================
    MAIN START
 ========================= */
-
+console.log("CORE 1");
 window.startEngine = async function () {
-
+console.log("ENGINE CREATED");
     await initEngine();
 
     await renderChapters();
 
 }
+console.log("CORE 2");
 /* =========================
    UI: STORY HEADER
 ========================= */

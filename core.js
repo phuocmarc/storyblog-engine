@@ -270,7 +270,7 @@ async function renderChapters() {
    MAIN START
 ========================= */
 
-async function startEngine() {
+window.startEngine = async function () {
 
     await initEngine();
 

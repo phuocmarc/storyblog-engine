@@ -4,28 +4,31 @@ window.startEngine = async function () {
 
     const app = document.getElementById("app");
 
-    if (!app) return;
+    if (!app) {
+        console.error("Missing #app div");
+        return;
+    }
 
     try {
 
-        const url = "https://phuocmarc.github.io/storyblog-engine/stories/nhung-cuoc-xe-am-duong/story.json";
+        const res = await fetch(window.CONFIG.storyUrl);
 
-        const res = await fetch(url);
+        if (!res.ok) throw new Error("HTTP " + res.status);
 
         const story = await res.json();
 
         app.innerHTML = `
-            <h1>${story.title}</h1>
-            <p>${story.description}</p>
+            <h1>${story.title || "No title"}</h1>
+            <p>${story.description || ""}</p>
         `;
 
         console.log("ENGINE OK");
 
-    } catch (e) {
+    } catch (err) {
 
-        console.error("ENGINE ERROR:", e);
+        console.error("LOAD ERROR:", err);
 
-        app.innerHTML = "Load story failed";
+        app.innerHTML = "<h2>Load story failed</h2>";
 
     }
 
